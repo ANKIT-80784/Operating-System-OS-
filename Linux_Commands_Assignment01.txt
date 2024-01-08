@@ -1,0 +1,92 @@
+
+ASSIGNMENT 01:
+
+====================================================================
+
+
+ 1159  man grep
+ 1160  uname
+ 1161  pwd
+ 1162  hostname
+ 1163  hostname -i
+ 1164  hostname -I
+ 1165  hostname --all-ip-address
+ 1166  date
+ 1167  cal -y
+ 1168  ls
+ 1169  ls one
+ 1170  cat > test.txt
+ 1171  cat >> test.txt
+ 1172  cat  test.txt
+ 1173  cp test.txt file1.tct
+ 1174  cat  file1.txt
+ 1175  cp test.txt file2.txt
+ 1176  ls 
+ 1177  mv file1.txt one/
+ 1178  ls one/
+ 1179  ls
+ 1180  mv text1.txt text.txt
+ 1181  ls
+ 1182  tac text.txt
+ 1183  cat text.txt
+ 1184  cat file.
+ 1185  cat file1.tct
+ 1186  tac file1.tct
+ 1187  rev file1.tct
+ 1188  wc file1.tct
+ 1189  mkdir test
+ 1190  cd test
+ 1191  cd ..
+ 1192  rm test
+ 1193  rm -R test
+ 1194  mkdir test
+ 1195  rmdir test
+ 1196  touch -m file1.tct
+ 1197  touch 1.txt 2.txt 3.txt
+ 1198  ls -S
+ 1199  ls -Ss
+ 1200  cat > 1.txt
+ 1201  uniq 1.txt
+ 1202  head -6 1.txt
+ 1203  tail - 10 1.txt
+ 1204  tail -10 1.txt
+ 1205  uniq | tail -10 1.txt
+ 1206  tail -10 1.txt | uniq
+ 1207  factor 58
+ 1208  alias ..="cd .."
+ 1209  ..
+ 1210  cd OS_Practise
+ 1211  unalias ..
+ 1212  ,,
+ 1213  ..
+ 1214  echo "JAY SIYA RAM.."
+ 1215  ps 
+ 1216  ps -u 
+ 1217  ps -9 67128
+ 1218  kill -9 67128
+ 1219  kill -9 1710
+ 1220  man grep
+ 1221  man hostname
+ 1222  man cp
+ 1223  man tac
+ 1224  man ls
+ 1225  man factor
+ 1226  factor 12
+ 1227  man alias
+ 1228  alias .. = 'cd ..'
+ 1229  alias ..= 'cd ..'
+ 1230  alias ..="cd .."
+ 1231  ..
+ 1232  man unalias
+ 1233  unalias ..
+ 1234  ..
+ 1235  man kill
+ 1236  kill -l
+ 1237  ps aux
+ 1238  kill -9 67128
+ 1239  ps aux
+ 1240  history
+ 1241  env
+ 1242  history
+
+==============================================================================================

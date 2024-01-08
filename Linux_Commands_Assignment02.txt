@@ -1,0 +1,346 @@
+
+ASSIGNMENT 2
+====================================================================
+
+Que 1. List the directory contents date wise sorted.
+
+output:-
+	
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ ls -lt -r
+		total 4492
+		drwxr-xr-x  2 chaitanya chaitanya    4096 Sep  8 06:12  Videos
+		drwxr-xr-x  2 chaitanya chaitanya    4096 Sep  8 06:12  Public
+		drwxr-xr-x  2 chaitanya chaitanya    4096 Sep  8 06:12  Music
+		drwxrwxr-x  2 chaitanya chaitanya    4096 Sep  8 21:29 'JAI SHREE RAM'
+		-rw-rw-r--  1 chaitanya chaitanya     191 Sep 12 18:13 'steps to commit data'
+		-rw-rw-r--  1 chaitanya chaitanya     155 Sep 14 14:43 'sunbeam data git details'
+		-rw-rw-r--  1 chaitanya chaitanya    6493 Sep 15 20:54  CPP.zip
+		drwxrwxr-x  2 chaitanya chaitanya    4096 Sep 20 15:26  CPP
+		drwxrwxr-x  4 chaitanya chaitanya    4096 Sep 22 20:19  Assignments
+		drwxrwxr-x  2 chaitanya chaitanya    4096 Sep 30 16:00  mysql-pl
+		drwxrwxr-x  5 chaitanya chaitanya    4096 Oct 13 15:19  WPT_practice
+		drwxr-xr-x  4 chaitanya chaitanya    4096 Oct 19 15:48  Pictures
+		drwxr-xr-x  5 chaitanya chaitanya    4096 Oct 19 16:07  Documents
+		drwxrwxr-x  3 chaitanya chaitanya    4096 Oct 20 15:37  spring-tool-suite-3.9.18.RELEASE-e4.21.0-linux-gtk-x86_64
+		drwxrwxr-x  3 chaitanya chaitanya    4096 Oct 29 23:15 'PG-DAC SUNBEAM DATA'
+		-rw-rw-r--  1 chaitanya chaitanya  337112 Oct 31 14:38  hs_err_pid47856.log
+		-rw-rw-r--  1 chaitanya chaitanya  336580 Nov  4 06:55  hs_err_pid16236.log
+		-rw-rw-r--  1 chaitanya chaitanya  312006 Nov  4 06:58  hs_err_pid20005.log
+		-rw-rw-r--  1 chaitanya chaitanya 2485905 Nov  4 14:42  mysql-connector-j-8.1.0.jar
+		-rw-rw-r--  1 chaitanya chaitanya  277924 Nov  4 15:35  hs_err_pid4525.log
+		-rw-rw-r--  1 chaitanya chaitanya  310485 Nov  4 15:36  hs_err_pid20809.log
+		-rw-rw-r--  1 chaitanya chaitanya     236 Nov  5 23:12 'git token'
+		drwxrwxr-x 51 chaitanya chaitanya    4096 Nov  8 23:18  java_practise
+		-rw-rw-r--  1 chaitanya chaitanya    3257 Nov 17 16:02  edit.java
+		-rw-rw-r--  1 chaitanya chaitanya    3339 Nov 17 17:56  writeReviewNdEditReview
+		-rw-rw-r--  1 chaitanya chaitanya     174 Nov 17 18:39 'sql 2'
+		-rw-rw-r--  1 chaitanya chaitanya  380181 Nov 21 22:56  hs_err_pid3855.log
+		-rw-rw-r--  1 chaitanya chaitanya    1645 Nov 22 14:42  sql
+		drwxrwxr-x 28 chaitanya chaitanya    4096 Nov 24 14:13  DSA_Practise
+		-rw-rw-r--  1 chaitanya chaitanya    4217 Nov 24 15:47  EmployeeBST
+		-rw-rw-r--  1 chaitanya chaitanya    3509 Nov 24 16:00  AVL
+		-rw-rw-r--  1 chaitanya chaitanya    7839 Nov 24 16:01  BST
+		-rw-rw-r--  1 chaitanya chaitanya    4356 Nov 24 16:03  DCLL
+		-rw-rw-r--  1 chaitanya chaitanya    2540 Nov 24 16:04  CLL
+		drwxrwxr-x  6 chaitanya chaitanya    4096 Nov 25 00:44  exams
+		drwxr-xr-x 19 chaitanya chaitanya    4096 Nov 25 09:12  Downloads
+		drwxr-xr-x  2 chaitanya chaitanya    4096 Nov 25 10:35  Desktop
+		drwx------  9 chaitanya chaitanya    4096 Nov 25 11:18  snap
+		drwxrwxr-x 10 chaitanya chaitanya    4096 Nov 27 16:54  PG-DAC
+
+
+====================================================================
+
+
+Que 2. List the directory contents size wise sorted.
+Output:-
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ ls -Ssr
+		total 4492
+		   4 'sunbeam data git details'
+		   4 'sql 2'
+		   4 'steps to commit data'
+		   4 'git token'
+		   4  sql
+		   4  CLL
+		   4  edit.java
+		   4  writeReviewNdEditReview
+		   4  AVL
+		   4  WPT_practice
+		   4  Videos
+		   4  spring-tool-suite-3.9.18.RELEASE-e4.21.0-linux-gtk-x86_64
+		   4  snap
+		   4  Public
+		   4  Pictures
+		   4 'PG-DAC SUNBEAM DATA'
+		   4  PG-DAC
+		   4  mysql-pl
+		   4  Music
+		   4  java_practise
+		   4 'JAI SHREE RAM'
+		   4  exams
+		   4  DSA_Practise
+		   4  Downloads
+		   4  Documents
+		   4  Desktop
+		   4  CPP
+		   4  Assignments
+		   8  EmployeeBST
+		   8  DCLL
+		   8  CPP.zip
+		   8  BST
+		 272  hs_err_pid4525.log
+		 304  hs_err_pid20809.log
+		 308  hs_err_pid20005.log
+		 332  hs_err_pid16236.log
+		 332  hs_err_pid47856.log
+		 372  hs_err_pid3855.log
+		2428  mysql-connector-j-8.1.0.jar
+		
+		
+====================================================================
+
+
+3. List directory contents along with their inode no.
+output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ ls -i
+		5534443  Assignments
+		5533727  AVL
+		5533785  BST
+		5533941  CLL
+		5769289  CPP
+		5532547  CPP.zip
+		5531643  DCLL
+		5524561  Desktop
+		5524565  Documents
+		5524562  Downloads
+		6293418  DSA_Practise
+		5514253  edit.java
+		5530852  EmployeeBST
+		5506516  exams
+		5541069 'git token'
+		5541003  hs_err_pid16236.log
+		5505847  hs_err_pid20005.log
+		5510343  hs_err_pid20809.log
+		5514407  hs_err_pid3855.log
+		5541216  hs_err_pid4525.log
+		5514373  hs_err_pid47856.log
+		5529854 'JAI SHREE RAM'
+		5914061  java_practise
+		5524566  Music
+		5510460  mysql-connector-j-8.1.0.jar
+		5510789  mysql-pl
+		5538235  PG-DAC
+		5524521 'PG-DAC SUNBEAM DATA'
+		5524567  Pictures
+		5524564  Public
+		5524539  snap
+		5910194  spring-tool-suite-3.9.18.RELEASE-e4.21.0-linux-gtk-x86_64
+		5507276  sql
+		5532615 'sql 2'
+		5538343 'steps to commit data'
+		5525220 'sunbeam data git details'
+		5524568  Videos
+		5514294  WPT_practice
+		5533240  writeReviewNdEditReview
+		
+====================================================================
+
+	
+Que 4. List the contents of the subdirectory.
+Output:-
+
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ ls -R
+		.:
+		 demo   file1.txt   four   sql     'steps to commit data'   two
+		 dir1   file2.txt   one   'sql 2'   text1.txt
+
+		./demo:
+
+		./dir1:
+		dir2  f1.png
+
+		./dir1/dir2:
+		dir3  f2.exe
+
+		./dir1/dir2/dir3:
+		text1.txt
+
+		./four:
+
+		./one:
+
+		./two:
+
+====================================================================
+
+		
+Que 5. Create a file, write your surname and name in it and
+save.
+i. now open the same file and add your address in it and
+save.
+ii. reopen the same file and check your name and address in
+it.
+Output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ cat > demo/myIntro
+		HELLO FRIENDS,
+		Myself CHAITANYA VIBHUTE
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ cat >> demo/myIntro
+		Address:-53/1 c, Mehatb nagar shelgi solapur.
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ cat demo/myIntro
+		HELLO FRIENDS,
+		Myself CHAITANYA VIBHUTEAddress:-53/1 c, Mehatb nagar shelgi solapur.
+
+====================================================================
+
+
+Que 6. how to change the time stamp of file
+Output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ touch -t 198407041130.11 file1.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ ls -l
+		total 36
+		drwxrwxr-x 2 chaitanya chaitanya 4096 Nov 27 18:39  demo
+		drwxrwxr-x 3 chaitanya chaitanya 4096 Nov 27 18:23  dir1
+		-rw-rw-r-- 1 chaitanya chaitanya   37 Jul  4  1984  file1.txt
+		-rw-rw-r-- 1 chaitanya chaitanya    0 Nov 27 18:13  file2.txt
+		drwxrwxr-x 2 chaitanya chaitanya 4096 Nov 27 18:13  four
+		drwxrwxr-x 2 chaitanya chaitanya 4096 Nov 27 18:13  one
+		-rw-rw-r-- 1 chaitanya chaitanya 1645 Nov 22 14:42  sql
+		-rw-rw-r-- 1 chaitanya chaitanya  174 Nov 17 18:39 'sql 2'
+		-rw-rw-r-- 1 chaitanya chaitanya  191 Sep 12 18:13 'steps to commit data'
+		-rw-rw-r-- 1 chaitanya chaitanya    0 Nov 27 18:28  text1.txt
+		drwxrwxr-x 2 chaitanya chaitanya 4096 Nov 27 18:13  two
+
+====================================================================
+
+
+Que 7.Create directory structure : Give following commands :-
+Output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ mkdir one
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise$ cd one
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ touch 1.txt 11.txt 111.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ mkdir two
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ cd two
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two$ touch 2.txt 22.txt 222.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two$ mkdir three
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two$ cd three
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three$ touch 3.txt 33.txt 333.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three$ mkdir four
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three$ cd four
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four$ touch 4.txt 44.txt 444.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four$ mkdir five
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four$ cd five
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ touch 5.txt 55.txt 555.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ cd ~
+	
+	
+====================================================================
+
+Que 8. Considering above directory structure , Do following
+operations :
+Output:-
+	i. list the directory contents of directory named
+	"five" from current directory (i.e. home directory).
+	output:-
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ ls OS_Practise/one/two/three/four/five
+			555.txt  55.txt  5.txt
+	ii. write your name in a file named "44.txt" of
+	directory "four" from current directory.
+	output:-
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ cat > OS_Practise/one/two/three/four/44.txt
+			My name is Chaitanya Nagesh Vibhute.    
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ cat  OS_Practise/one/two/three/four/44.txt
+			My name is Chaitanya Nagesh Vibhute.
+	iii. remove the file named "555.txt" from directory
+	"five" from current directory.
+	output:-
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ rm  OS_Practise/one/two/three/four/five/555.txt
+		chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ ls OS_Practise/one/two/three/four/five
+			55.txt  5.txt
+	iv. change directory to five ( i.e cd one/two/three/four/five/ ).
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ cd OS_Practise/one/two/three/four/five
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ 
+	
+	v. write your course name in file named "3.txt" which
+	resides in directory "three" from current directory (i.e.
+	five).also read the same file.
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ cat > ../../3.txt
+		My course name is PG-DAC.
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ cat  ../../3.txt
+		My course name is PG-DAC.
+	
+	vi. list the contents of directory "two" from current
+	directory (i.e. five).
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ ls ../../../
+		222.txt  22.txt  2.txt  three
+	
+	vii. remove file named "222.txt" which belongs to
+	directory "two" from current directory (i.e. five)
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ rm ../../../222.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ ls ../../../
+		22.txt  2.txt  three
+
+	
+	viii. now change the directory to "one"
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one/two/three/four/five$ cd ../../../../
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ 
+
+	
+	ix. remove all files only from directory named "five"
+	from current directory (i.e. one)
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ rm -R two/three/four/five/*
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ ls two/three/four/five/
+	
+
+	
+	
+	x. remove directory named "five" from current directory
+	(i.e. one)
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ rmdir two/three/four/five
+
+	
+	xi. remove whole directory named "four" from current
+	directory (i.e. one)
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ rm -R  two/three/four
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ ls two/three/
+		333.txt  33.txt  3.txt
+
+	
+	xii. change to your home directory.
+	output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ cd ~
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~$ pwd
+		/home/chaitanya
+	
+====================================================================
+
+9. change the time stamp of file named "3.txt" which resides
+in directory named "three".(man touch)
+Output:-
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ ls -l two/three
+		total 0
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Nov 28 17:26 333.txt
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Nov 28 17:26 33.txt
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Nov 28 17:26 3.txt
+
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ touch -t 194508150000.00 two/three/3.txt
+	chaitanya@chaitanya-HP-Laptop-15g-br0xx:~/OS_Practise/one$ ls -l two/three
+		total 0
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Nov 28 17:26 333.txt
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Nov 28 17:26 33.txt
+		-rw-rw-r-- 1 chaitanya chaitanya 0 Aug 15  1945 3.txt
+
+====================================================================
+	
+	
+	
+	
+
+

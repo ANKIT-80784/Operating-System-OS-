@@ -1,0 +1,380 @@
+1. ls - Display Hidden Files
+ls -a
+ .               google-chrome-stable_current_amd64.deb
+ ..              .lesshst
+'1Sunbeam Dac'   .local
+ .bash_history   Music
+ .bash_logout    Pictures
+ .bashrc         .pki
+ .cache          .profile
+ .config         Public
+ Desktop         snap
+ Documents       .ssh
+ Downloads       .sudo_as_admin_successful
+ .gitconfig      Templates
+ .gnupg          Videos
+-------------------------------------------------------------------------
+2.rename - Rename all *.txt files to *.html
+
+~/1Sunbeam Dac/OS/Practice/one$ ls
+111.txt  11.txt  1.txt  two
+
+~/1Sunbeam Dac/OS/Practice/one$ rename 's/txt/html/' *.txt
+
+~/1Sunbeam Dac/OS/Practice/one$ ls
+111.html  11.html  1.html  two
+
+-------------------------------------------------------------------------
+3.ln -s - Create symbolic link (shortcut) for a file
+ln -s 1.html s.html 
+111.html  11.html  1.html  s.html  two
+
+-------------------------------------------------------------------------
+4.ln Create hard link for a file
+ln 11.html 11.txt
+111.html  11.html  11.txt  1.html  s.html  two
+
+-------------------------------------------------------------------------
+5. stat Display time stamp of the file
+stat 1.html 
+  File: 1.html
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 10307h/66311d	Inode: 2892701     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/ sunbeam)   Gid: ( 1000/ sunbeam)
+Access: 2023-11-28 21:03:25.592173780 +0530
+Modify: 2023-11-28 17:49:50.192440900 +0530
+Change: 2023-11-28 21:08:13.789875712 +0530
+ Birth: 2023-11-28 17:49:50.192440900 +0530
+
+-------------------------------------------------------------------------
+6.touch - Change the time stamp of the file
+ls -l 1.html 
+-rw-rw-r-- 1 sunbeam sunbeam 0 Nov 28 17:49 1.html
+~/1Sunbeam Dac/OS/Practice/one$ touch -m 1.html 
+
+~/1Sunbeam Dac/OS/Practice/one$ ls -l 1.html 
+-rw-rw-r-- 1 sunbeam sunbeam 0 Nov 28 21:17 1.html
+
+-------------------------------------------------------------------------
+7.touch - Create empty file
+ls
+111.html  11.html  11.txt  1.html  s.html  two
+
+~/1Sunbeam Dac/OS/Practice/one$ touch emp.txt
+
+~/1Sunbeam Dac/OS/Practice/one$ ls
+111.html  11.html  11.txt  1.html  emp.txt  s.html  two
+
+-------------------------------------------------------------------------
+8.tail - Print all lines in a file from fifth line onwards
+cat pat.txt 
+dc
+dac
+daac
+ddaacc
+dmc
+drc
+daaaaac
+dmcdmcdmc
+dac
+cad
+d*c
+d%d
+
+tail -n +5 pat.txt 
+dmc
+drc
+daaaaac
+dmcdmcdmc
+dac
+cad
+d*c
+d%d
+
+-------------------------------------------------------------------------
+9.init 0, poweroff - Shutdown (Only for super-user)
+
+-------------------------------------------------------------------------
+10.init 6, reboot - Reboot (Only for super-user)
+
+-------------------------------------------------------------------------
+12.whoami - Find current user
+whoami
+sunbeam
+
+-------------------------------------------------------------------------
+13.tty - Find current terminal
+tty
+/dev/pts/0
+
+-------------------------------------------------------------------------
+14.who am i - Find current user and terminal
+whoami
+sunbeam
+
+-------------------------------------------------------------------------
+15.users - Find all users logged into the system
+users
+sunbeam
+
+-------------------------------------------------------------------------
+16.who - Find all users logged in and terminals in use
+who
+sunbeam  :1           2023-11-28 20:48 (:1)
+
+-------------------------------------------------------------------------
+17.grep, egrep, fgrep - Find a given word/pattern from the file
+cat  pat.txt
+dc
+dac
+daac
+ddaacc
+dmc
+drc
+daaaaac
+dmcdmcdmc
+dac
+cad
+d*c
+d%d
+
+grep -i 'dac' pat.txt 
+dac
+dac
+
+grep -i 'd[a-z]c' pat.txt 
+dac
+dmc
+drc
+dmcdmcdmc
+dac
+
+grep -i 'd*c' pat.txt 
+dc
+dac
+daac
+ddaacc
+dmc
+drc
+daaaaac
+dmcdmcdmc
+dac
+cad
+d*c
+
+fgrep 'd*c' pat.txt 
+d*c
+
+egrep 'd(aa)c' pat.txt 
+daac
+ddaacc
+
+egrep 'd(a{2,})c' pat.txt 
+daac
+ddaacc
+daaaaac
+sunbeam@sunbeam-Victus-by-HP-Gaming-Laptop-15-fa0xxx:~/1Sunbeam Dac/OS/Pr
+
+egrep 'd(a{,3})c' pat.txt 
+dc
+dac
+daac
+ddaacc
+dac
+
+egrep 'd[\*\%][dc]' pat.txt 
+d*c
+d%d
+
+-------------------------------------------------------------------------
+18.chmod - Make a file as read-only
+chmod -r -w -x 11.html 
+chmod: 11.html: new permissions are -------w-, not ---------
+
+~/1Sunbeam Dac/OS/Practice/one$ ls -l
+total 20
+-rw-rw-r-- 1 sunbeam sunbeam    0 Nov 28 17:49 111.html
+--------w- 2 sunbeam sunbeam    0 Nov 28 17:49 11.html
+--------w- 2 sunbeam sunbeam    0 Nov 28 17:49 11.txt
+-rwxrwxr-x 1 sunbeam sunbeam    0 Nov 28 21:17 1.html
+-rw-rw-r-- 1 sunbeam sunbeam   91 Nov 28 21:44 course.txt
+-rw-rw-r-- 1 sunbeam sunbeam  122 Nov 28 21:57 emp.txt
+-rw-rw-r-- 1 sunbeam sunbeam   46 Nov 28 22:00 num.txt
+-rw-rw-r-- 1 sunbeam sunbeam   61 Nov 28 22:19 pat.txt
+lrwxrwxrwx 1 sunbeam sunbeam    6 Nov 28 21:12 s.html -> 1.html
+drwxrwxr-x 3 sunbeam sunbeam 4096 Nov 28 18:19 two
+
+-------------------------------------------------------------------------
+19.chmod - Make a file as write, read and execute
+
+chmod 777 11.html 
+
+~/1Sunbeam Dac/OS/Practice/one$ ls -l
+total 20
+-rw-rw-r-- 1 sunbeam sunbeam    0 Nov 28 17:49 111.html
+-rwxrwxrwx 2 sunbeam sunbeam    0 Nov 28 17:49 11.html
+-rwxrwxrwx 2 sunbeam sunbeam    0 Nov 28 17:49 11.txt
+-rwxrwxr-x 1 sunbeam sunbeam    0 Nov 28 21:17 1.html
+-rw-rw-r-- 1 sunbeam sunbeam   91 Nov 28 21:44 course.txt
+-rw-rw-r-- 1 sunbeam sunbeam  122 Nov 28 21:57 emp.txt
+-rw-rw-r-- 1 sunbeam sunbeam   46 Nov 28 22:00 num.txt
+-rw-rw-r-- 1 sunbeam sunbeam   61 Nov 28 22:19 pat.txt
+lrwxrwxrwx 1 sunbeam sunbeam    6 Nov 28 21:12 s.html -> 1.html
+drwxrwxr-x 3 sunbeam sunbeam 4096 Nov 28 18:19 two
+-------------------------------------------------------------------------
+20.wc - (using redirection)Take input from the file, count words and store output to other file
+wc emp.txt 
+ 16  20 108 emp.txt
+
+-------------------------------------------------------------------------
+21.who | wc - (using pipe)Count words in output of “who” command
+who | wc
+      1       5      44
+
+-------------------------------------------------------------------------
+22.head, tail - (using pipe)Print lines 5 to 10 from the given file
+cat emp.txt 
+Chaitanya
+Priya
+Rupali
+Pooja
+Ashu
+Aakash
+Satwik 
+Omkar
+Rushikesh
+Aadesh
+Payal
+
+
+head emp.txt | tail -n 5
+Priya
+Rupali
+Pooja
+Ashu
+Aakash
+
+-------------------------------------------------------------------------
+23.sort , uniq - (using pipe)Print the uniq values from the unsorted file
+cat num.txt 
+1
+2
+3
+4
+5
+6
+11
+12
+13
+14
+1
+2
+3
+4
+5
+21
+22
+23
+24
+
+sort num.txt | uniq
+1
+11
+12
+13
+14
+2
+21
+22
+23
+24
+3
+4
+5
+6
+
+-------------------------------------------------------------------------
+24.who, grep - (using pipe)Display all users not using tty2, tty3, tty4
+who | grep -v '(tty2|tty3|tty4)'
+sunbeam  :1           2023-11-28 20:48 (:1)
+
+-------------------------------------------------------------------------
+25.ls - Display all files in ascending order of their file size
+ls OSNotes/Assignments/ -s
+total 1644
+508 1_Linux_Command_assignment_I.pdf     392 4_Linux_Commands_assignment_IV.pdf
+192 2_Linux_commands_assignment_II.pdf    44 5_Linux_Shell_Script_Assignments.pdf
+508 3_Linux_Commands_assignment_III.pdf
+
+ls OSNotes/Assignments/ -S
+3_Linux_Commands_assignment_III.pdf  4_Linux_Commands_assignment_IV.pdf  5_Linux_Shell_Script_Assignments.pdf
+1_Linux_Command_assignment_I.pdf     2_Linux_commands_assignment_II.pdf
+
+-------------------------------------------------------------------------
+26.ls, grep  - (using pipe)Count number of files and directories from current directory 
+ls | grep -c "."
+9
+-------------------------------------------------------------------------
+27.ls, grep - (using pipe)Display only hidden files in a directory
+
+ls -a | grep -c "[.{1,}]"
+17
+
+ls -a
+ .               .bashrc     Downloads                                .local     Public                      Videos
+ ..              .cache      .gitconfig                               Music      snap
+'1Sunbeam Dac'   .config     .gnupg                                   Pictures   .ssh
+ .bash_history   Desktop     google-chrome-stable_current_amd64.deb   .pki       .sudo_as_admin_successful
+ .bash_logout    Documents   .lesshst                                 .profile   Templates
+
+-------------------------------------------------------------------------
+28.tr - Convert file contents into uppercase , also learn "-s" option of this command
+cat emp.txt | tr 'a-z' 'A-z'
+Puja
+Swara
+Snehal
+Diksha
+Pratiksha
+Priya
+Rupali
+Pooja
+Ashu
+Aakash
+Chaitnya
+Satwik 
+Omkar
+Rushikesh
+Aadesh
+Payal
+
+echo "DAC    PG" | tr -s " "
+DAC PG
+
+-------------------------------------------------------------------------
+29.cut Split the file contents using delimiter and print required fields
+cat course.txt
+PGDAC - JAVA DSA .NET C C++
+PGDMC - JAVA DSA WPT JAVA-A REACT
+PGDESD - PYTHON HADOOP JAVA 
+
+cat course.txt | cut -d " " -f2,3,4
+- JAVA DSA
+- JAVA DSA
+- PYTHON HADOOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

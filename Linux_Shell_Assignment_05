@@ -1,0 +1,629 @@
+1. Write a shell script to display your LOGIN NAME and HOME directory.
+-
+sh - vim assign3_1.sh 
+#!/bin/bash
+whoami
+ls /home/sunbeam
+
+output -./assign3_1.sh 
+sunbeam
+'1Sunbeam Dac'	 Downloads				  Pictures   Templates
+ Desktop	 google-chrome-stable_current_amd64.deb   Public     Videos
+ Documents	 Music					  snap
+------------------------------------------------------------------------------------------------
+2. Write a shell script to display menu like “1. Date, 2. Cal, 3. Ls, 4. Pwd, 5. Exit” and
+execute the commands depending on user choice.
+sh - vim assign3_2.sh 
+#!/bin/bash
+choice=0;
+while [ $choice -ne 5 ]
+do
+echo "1.Date 2.Cal 3.ls 4.Pwd 5.Exit"
+read choice
+case $choice in
+        1)
+                date
+                ;;
+        2)
+                cal
+                ;;
+        3)
+                ls
+                ;;
+        4)
+                pwd
+                ;;
+        5)
+                exit
+                ;;
+        *)
+                echo "Invalid"
+                ;;
+esac
+done
+
+output - -./assign3_2.sh
+1.Date 2.Cal 3.ls 4.Pwd 5.Exit
+1
+Wednesday 29 November 2023 05:05:58 PM IST
+1.Date 2.Cal 3.ls 4.Pwd 5.Exit
+2
+   November 2023      
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30        
+                      
+1.Date 2.Cal 3.ls 4.Pwd 5.Exit
+3
+111.html  11.txt  assign3_1.sh	course.txt  num.txt  s.html
+11.html   1.html  assign3_2.sh	emp.txt     pat.txt  two
+1.Date 2.Cal 3.ls 4.Pwd 5.Exit
+4
+/home/sunbeam/1Sunbeam Dac/OS/Practice/one
+1.Date 2.Cal 3.ls 4.Pwd 5.Exit
+5
+------------------------------------------------------------------------------------------------
+3. Write a shell script to accept the name from the user and check whether user entered
+name is file or directory. If name is file display its size and if it is directory display its
+contents.
+sh - vim assign3_3.sh 
+#!/bin/bash
+echo "Enter Path"
+read path
+if [ -e $path ]
+then
+        if [ -f $path ]
+        then
+                ls -s $path
+        elif [ -d $path ]
+        then
+                ls $path
+        else
+                echo "Other File Type"
+        fi
+else
+        echo "Invalid Path"
+fi
+
+output - ./assign3_3.sh
+Enter Path
+11.txt
+0 11.txt
+
+./assign3_3.sh
+Enter Path
+../one
+111.html  11.txt  assign3_1.sh	assign3_3.sh  course.txt  num.txt  s.html
+11.html   1.html  assign3_2.sh	assign3_4.sh  emp.txt	  pat.txt  two
+
+./assign3_3.sh
+Enter Path
+123
+Invalid Path
+------------------------------------------------------------------------------------------------
+
+4. Write a shell script to determine whether a given number is prime or not
+-
+sh 
+#!/bin/bash
+echo "Enter Number"
+read num
+if [ $num -lt 0 ]
+then
+        echo "Number Cant Be Negative"
+        exit
+elif [ $num -eq 0 -o $num -eq 1 ]
+then
+       echo "Non Prime"
+       exit
+else
+        n=2
+        m=`expr $num / 2`
+while [ $n -le $m ]     
+do
+        i=`expr $num \% $n`
+        if [ $i -eq 0 ]
+        then
+                echo "Not A Prime Number"
+                exit
+        fi
+        n=`expr $n + 1`
+done
+fi
+echo "Prime Number"
+
+output - ./assign3_13.sh 
+Enter Number
+5
+Prime Number
+
+./assign3_13.sh 
+Enter Number
+100
+Not A Prime Number
+
+./assign3_13.sh 
+Enter Number
+111
+Not A Prime Number
+
+./assign3_13.sh 
+Enter Number
+131
+Prime Number
+
+./assign3_13.sh 
+Enter Number
+2
+Prime Number
+
+./assign3_13.sh 
+Enter Number
+3
+Prime Number
+------------------------------------------------------------------------------------------------
+
+5. Write a Program to find the greatest of three numbers
+sh - 
+#!/bin/bash
+echo "Enter 3 Numbers"
+read num1 num2 num3
+if [ $num1 -eq $num2 -a $num1 -eq $num3  ]
+then
+        echo "All Numbers are equal"
+elif [ $num1 -le $num2 -a $num3 -le $num2 ]
+then
+        echo "2nd Number is Greatest"
+elif [ $num1 -le $num3 -a $num2 -le $num3 ]
+then
+        echo "3rd Number is Greatest"
+else
+        echo "1st Number is Greatest"
+fi
+./assign3_4.sh 
+Enter 3 Numbers
+11 12 10
+2nd Number is Greatest
+
+./assign3_4.sh 
+Enter 3 Numbers
+1 1 1
+All Numbers are equal
+------------------------------------------------------------------------------------------
+
+6. Write a Program to find whether a given year is a leap year or not
+-
+sh
+#!/bin/bash
+echo "Enter Number"
+read num
+a=`expr $num \% 4`
+b=`expr $num \% 100`
+c=`expr $num \%  400`
+if [ $num -le 0 ]
+then
+        echo "Invalid Year"
+elif [ $a -eq 0 -a  $b -ne 0 -o $c -eq 0 ]
+then
+        echo "leap year"
+else
+        echo "Non Leap Year"
+fi
+
+output - /assign3_14.sh 
+Enter Number
+2000
+leap year
+
+./assign3_14.sh 
+Enter Number
+1000
+Non Leap Year
+
+./assign3_14.sh 
+Enter Number
+1200
+leap year
+
+./assign3_14.sh 
+Enter Number
+2024
+leap year
+
+./assign3_14.sh 
+Enter Number
+2002
+Non Leap Year
+------------------------------------------------------------------------------------------------
+7. Write a Program to find whether a given number is positive or negative
+sh - 
+#!/bin/bash
+echo "Enter Number"
+read num
+if [ $num -eq 0 ]
+then
+        echo "Number is Zero"
+elif [ $num -lt 0 ]
+then
+        echo "Number is Negative"
+else
+        echo "Number is Positive"
+fi
+
+./assign3_4.sh 
+Enter Number
+-4
+Number is Negative
+
+sunbeam@sunbeam-Victus-by-HP-Gaming-Laptop-15-fa0xxx:~/1Sunbeam Dac/OS/Practice/one$ ./assign3_4.sh 
+Enter Number
++5
+Number is Positive
+
+./assign3_4.sh 
+Enter Number
+0
+Number is Zero
+
+------------------------------------------------------------------------------------------------
+8. Write a program to print the table of a given number.
+sh-
+#!/bin/bash
+echo "Enter Number"
+read n
+a=1
+while [ $a -le 10 ]
+do
+        echo -n "$n * $a = "
+        expr $n*$a
+        a=`expr $a + 1`
+done
+
+output - ./assign3_6.sh 
+Enter Number
+5
+5 * 1 = 5*1
+5 * 2 = 5*2
+5 * 3 = 5*3
+5 * 4 = 5*4
+5 * 5 = 5*5
+5 * 6 = 5*6
+5 * 7 = 5*7
+5 * 8 = 5*8
+5 * 9 = 5*9
+5 * 10 = 5*10
+------------------------------------------------------------------------------------------------
+9. Write a program to find the factorial of given number.
+#!/bin/bash
+echo "Enter Number"
+read n
+a=1
+b=1
+if [ $n -eq 0 ]
+then
+        b=1
+else
+while [ $a -le $n ]
+do
+        b=`expr $b \* $a`
+        a=`expr $a + 1`
+done
+fi
+echo "Factorial = $b"
+
+./assign3_7.sh 
+Enter Number
+5
+Factorial = 120
+
+./assign3_7.sh 
+Enter Number
+6
+Factorial = 720
+------------------------------------------------------------------------------------------------
+10. Write a program to find given number of terms in the Fibonacci series.
+#!/bin/bash
+echo "Enter Number"
+read n
+sum=0;
+curr=1;
+prev=0;
+while [ $n -gt 0 ]
+do
+       sum=`expr $prev + $curr`
+       n=`expr $n - 1`
+       prev=$curr
+       curr=$sum
+       echo -n "$sum ,"
+done
+
+output - ./assign3_8.sh 
+Enter Number
+10
+1 ,2 ,3 ,5 ,8 ,13 ,21 ,34 ,55 ,89
+------------------------------------------------------------------------------------------------
+11. Write a program to calculate gross salary if the DA is 40%, HRA is 20% of basic salary.
+Accept basic salary form user and display gross salary (Result can be floating point
+value).
+#!/bin/bash
+echo "Enter Number"
+read n
+da=`echo "0.4 * $n" | bc`
+hra=`echo "0.2 * $n" | bc`
+echo "$da + $hra + $n" | bc
+
+output - ./assign3_9.sh 
+Enter Number
+1000.5  
+1600.8
+------------------------------------------------------------------------------------------------
+12. Write a shell script to accept a filename as argument and displays the last modification
+time if the file exists and a suitable message if it doesn’t exist.
+sh-
+#!/bin/bash
+echo "Enter File Path"
+read path
+if [ -f $path ]
+then
+        ls -l $path | cut -d " " -f8,9
+else
+        echo "Invalid File Path"
+fi
+                                                                              
+output - ./assign3_10.sh 
+Enter File Path
+pat.txt
+22:19 pat.txt
+
+./assign3_10.sh 
+Enter File Path
+two
+Invalid File Path
+------------------------------------------------------------------------------------------------
+13. Write a shell script to display only hidden file of current directory.
+sh - 
+#!/bin/bash
+ls -a | egrep "^\."
+
+output - ./assign3_10.sh 
+.
+..
+.assign3_4.sh.swp
+------------------------------------------------------------------------------------------------
+14. Write a shell script to display only executable files of current directory.
+-
+sh !/bin/bash
+echo "Enter File Path"
+read file
+if [ -f $file ]
+then
+        if [ -x $file ]
+        then
+                echo "File Has Executable Permission"
+        else
+                echo "File doesnot have executable permission"
+        fi
+else
+        echo "Not A File"
+fi
+
+
+output - 
+one$ ./assign3_12.sh 
+Enter File Path
+111.html
+File doesnot have executable permission
+
+./assign3_12.sh 
+Enter File Path
+assign3_6.sh
+File Has Executable Permission
+
+./assign3_12.sh 
+Enter File Path
+two
+Not A File
+
+------------------------------------------------------------------------------------------------
+15. Accept the two file names from user and append the contents in reverse case of first file
+into second file.
+sh - 
+#!/bin/bash
+echo "Enter file1"
+read file1
+echo "Enter file2"
+read file2
+if [ -e $file1 -a -e $file2 ]
+then
+        cat $file1 | rev | cat >> $file2
+else
+        echo "Invalid Files"
+fi
+
+output - cat emp.txt
+Puja
+Swara
+Snehal
+Diksha
+Pratiksha
+Priya
+Rupali
+Pooja
+Ashu
+Aakash
+Chaitnya
+Satwik 
+Omkar
+Rushikesh
+Aadesh
+Payal
+
+
+cat num.txt
+1
+2
+3
+4
+5
+6
+11
+12
+13
+14
+1
+2
+3
+4
+5
+21
+22
+23
+24
+
+./assign3_11.sh 
+Enter file1
+emp.txt
+Enter file2
+num.txt
+
+cat num.txt
+1
+2
+3
+4
+5
+6
+11
+12
+13
+14
+1
+2
+3
+4
+5
+21
+22
+23
+24
+ajup
+arawS
+lahenS
+ahskiD
+ahskitarP
+ayirP
+ilapuR
+ajooP
+uhsA
+hsakaA
+ayntiahC
+kiwtaS 
+rakmO
+hsekihsuR
+hsedaA
+layaP
+
+------------------------------------------------------------------------------------------------
+16. Write a shell script to display welcome message to the user along with contents of his
+home directory. Ensure that shell script will execute automatically when user login to the
+shell. (Make entry of your shell script into .bashrc file into your home directory).
+-
+sh
+
+
+-----------------------------------------------------------------------------------------------
+17. Print the following pattern.
+*
+* *
+* * *
+* * * *
+* * * * *
+
+sh - vim assign3_4.sh 
+#!/bin/bash
+first=0
+second=0
+while [ $first -le 4 ]
+do
+        while [ $second -le $first ]
+        do
+                echo -n "* "
+                second=`expr $second + 1`
+        done
+        echo ""
+        first=`expr $first + 1`
+        second=0
+done
+
+
+
+output ./assign3_4.sh 
+./assign3_4.sh 
+./assign3_5.sh 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
